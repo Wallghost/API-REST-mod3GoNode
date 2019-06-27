@@ -4,7 +4,7 @@ const Tweet = mongoose.model('Tweet');
 module.exports = {
     async create (req, res, next) {
         try {
-            //Aqui vamos criar o tweet e inserir o userID que vem lá do
+            // Aqui vamos criar o tweet e inserir o userID que vem lá do
             // Middleware de autenticação
             const tweet = await Tweet.create({ ...req.body, user: req.userId });
 

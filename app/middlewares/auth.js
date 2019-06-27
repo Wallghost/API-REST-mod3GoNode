@@ -11,6 +11,8 @@ module.exports = async (req, res, next) => {
     // A numeração do nosso token, fica na parte de headers da requisição
     const authHeader = req.headers.authorization;
 
+    console.log(authHeader);
+
     // Verificamos se o token veio está junto da requisição 
     if (!authHeader) {
         // O erro 400 é o Bad Request
